@@ -1,0 +1,50 @@
+@startuml AgroSustent
+
+left to right direction
+skinparam packageStyle rectangle
+skinparam actorStyle awesome
+
+actor "Produtor Local" as Produtor
+actor "Consumidor" as Consumidor
+actor "Administrador" as Admin
+
+rectangle "AgroSustent" {
+  
+  (Cadastro de Usuário) as Cadastro
+  (Divulgação de Produtos) as Divulgacao
+  (Busca e Filtro de Produtos) as Busca
+  (Chat/Contato Direto) as Chat
+  (Avaliação e Feedback) as Feedback
+  (Gerenciamento do Sistema) as Gerenciamento
+
+  Produtor --> Cadastro
+  Consumidor --> Cadastro
+
+  Produtor --> Divulgacao
+  Consumidor --> Busca
+  Consumidor --> Chat
+  Consumidor --> Feedback
+
+  Divulgacao --> Chat : "Usado para negociar(dívidas)"
+
+  Admin --> Gerenciamento
+  Gerenciamento --> Cadastro
+  Gerenciamento --> Divulgacao
+}
+
+note bottom of Cadastro
+Permite criar perfil simples para
+produtores e consumidores.
+end note
+
+note right of Divulgacao
+Produtores cadastram fotos,
+descrição e preço dos produtos naturais.
+end note
+
+note left of Busca
+Consumidores filtram por categoria,
+preço ou proximidade do produto.
+end note
+
+@enduml
