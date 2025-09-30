@@ -1,6 +1,6 @@
 **Disciplina:** Programação Web, Projeto e Desenvolvimento de Sistemas, Banco de Dados II
 
-**Alunos:** 
+**Alunos:**  Lauane Rayra, Anna Clara, Luiza Fernanda, Mariana Santos
 
 **Professores:** Camila Santos, Eudóxia Moura, Marcos Faino
 # Descrição Geral do Sistema
