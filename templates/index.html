@@ -1,114 +1,26 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Agro Sustent</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+{% extends "base.html" %}
+{% block content %}
+<div class="text-center py-5" style="background:#f7f9f7;">
+  <h1>Bem-vindo ao Agro Sustent</h1>
+  <p class="lead">A conexão entre produtores e consumidores.</p>
+  <a class="btn btn-success" href="{{ url_for('catalogo') }}">Explorar Produtos</a>
+</div>
 
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f5f8f6;
-    }
-    .navbar {
-      background: linear-gradient(90deg, #2e7d32, #43a047);
-    }
-    .hero {
-      background: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
-      color: white;
-      padding: 100px 0;
-      text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
-    }
-    .hero h1 {
-      font-weight: 700;
-      font-size: 3rem;
-    }
-    .card {
-      border: none;
-      border-radius: 15px;
-      transition: all 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    }
-    .card-title {
-      color: #2e7d32;
-      font-weight: 600;
-    }
-    .btn-success {
-      border-radius: 30px;
-    }
-    footer {
-      background: linear-gradient(90deg, #2e7d32, #43a047);
-      color: white;
-    }
-  </style>
-</head>
-<body>
-
-  <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="/"><i class="bi bi-leaf"></i> Agro Sustent</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="menu">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="/sobre">Sobre</a></li>
-          <li class="nav-item"><a class="nav-link" href="/contato">Contato</a></li>
-          <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
-          <li class="nav-item"><a class="nav-link" href="/cadastro">Cadastro</a></li>
-        </ul>
+<div class="container mt-4">
+  <h2 class="mb-3">Produtos Disponíveis</h2>
+  <div class="d-flex flex-wrap gap-3">
+    {% for p in produtos %}
+    <div class="card" style="width:220px;">
+      <img src="{{ p.imagem or url_for('static', filename='img/placeholder.png') }}" style="height:140px;object-fit:cover;">
+      <div class="card-body">
+        <h5>{{ p.title }}</h5>
+        <p class="mb-1 small">{{ p.description }}</p>
+        <p class="fw-bold">R$ {{ '%.2f'|format(p.price) }}</p>
       </div>
     </div>
-  </nav>
-
-  <section class="hero text-center">
-    <div class="container">
-      <h1>Bem-vindo ao Agro Sustent!</h1>
-      <p class="lead">A conexão entre produtores e consumidores de forma prática, saudável e sustentável.</p>
-      <a href="#produtos" class="btn btn-success btn-lg mt-3 shadow">Explorar Produtos</a>
-    </div>
-  </section>
-
-  <section class="py-5" id="produtos">
-    <div class="container">
-      <h2 class="mb-4 fw-bold text-success text-center">Produtos Disponíveis</h2>
-      <div class="row g-4">
-        {% for p in produtos %}
-          <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-              <img src="{{ p.image or 'https://via.placeholder.com/400x250?text=Produto' }}" class="card-img-top" alt="{{ p.title }}">
-              <div class="card-body">
-                <h5 class="card-title">{{ p.title }}</h5>
-                <p class="card-text">{{ p.description or "Sem descrição" }}</p>
-                <p class="text-success fw-bold">R$ {{ "%.2f"|format(p.price) }}</p>
-              </div>
-              <div class="card-footer bg-transparent border-0">
-                <a href="/produto/{{ p.id }}" class="btn btn-success w-100">Ver detalhes</a>
-              </div>
-            </div>
-          </div>
-        {% else %}
-          <p class="text-muted text-center">Nenhum produto cadastrado.</p>
-        {% endfor %}
-      </div>
-    </div>
-  </section>
-
-  <footer class="py-4 text-center mt-5">
-    <div class="container">
-      <p class="mb-0">&copy; 2025 Agro Sustent</p>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+    {% else %}
+    <p>Nenhum produto cadastrado.</p>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

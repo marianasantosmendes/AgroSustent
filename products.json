@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Tomate Orgânico",
+    "description": "Tomate fresco orgânico",
+    "price": 8.5,
+    "category": "Hortaliças",
+    "imagem": "static/img/placeholder.png"
+  },
+  {
+    "id": 2,
+    "title": "Ovo Caipira",
+    "description": "Ovo de galinha caipira - unidade",
+    "price": 0.8,
+    "category": "Granja",
+    "imagem": "static/img/placeholder.png"
+  },
+  {
+    "id": 3,
+    "title": "Queijo Artesanal",
+    "description": "Queijo de leite cru",
+    "price": 25.0,
+    "category": "Laticínios",
+    "imagem": "static/img/placeholder.png"
+  },
+  {
+    "id": 4,
+    "title": "Alface Crespa",
+    "description": "Alface fresca",
+    "price": 3.2,
+    "category": "Hortaliças",
+    "imagem": "static/img/placeholder.png"
+  }
+]

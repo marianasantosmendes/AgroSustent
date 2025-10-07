@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Catálogo — AgroSustent{% endblock %}
+{% block content %}
+<h1 class="text-center mb-4">Catálogo de Produtos</h1>
+
+<form method="get" action="{{ url_for('catalogo') }}" class="mb-4 text-center">
+  <input name="q" value="{{ request.args.get('q','') }}" placeholder="Buscar..." class="form-control d-inline-block" style="width:300px;">
+  <select name="category" class="form-select d-inline-block" style="width:200px;">
+      <option value="">Todas</option>
+      {% for c in categories %}
+      <option value="{{ c }}" {% if request.args.get('category')==c %}selected{% endif %}>{{ c }}</option>
+      {% endfor %}
+  </select>
+  <button type="submit" class="btn btn-success">Filtrar</button>
+</form>
+
+<div class="d-flex flex-wrap justify-content-center gap-3">
+  {% for p in produtos %}
+  <div class="card" style="width: 220px;">
+    <img src="{{ p.imagem or url_for('static', filename='img/placeholder.png') }}" class="card-img-top" style="height:150px; object-fit:cover;">
+    <div class="card-body">
+      <h5 class="card-title">{{ p.title }}</h5>
+      <p class="card-text">{{ p.description }}</p>
+      <p class="fw-bold">R$ {{ '%.2f'|format(p.price) }}</p>
+    </div>
+  </div>
+  {% else %}
+  <p>Nenhum produto encontrado.</p>
+  {% endfor %}
+</div>
+{% endblock %}

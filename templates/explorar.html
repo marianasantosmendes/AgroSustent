@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Explorar — AgroSustent{% endblock %}
+{% block content %}
+<h1 class="text-center mb-4">Explorar</h1>
+
+<h3>Destaques</h3>
+<div class="d-flex flex-wrap gap-3 mb-4">
+  {% for p in produtos[:4] %}
+  <div class="card" style="width:180px;">
+    <img src="{{ p.imagem or url_for('static', filename='img/placeholder.png') }}" class="card-img-top" style="height:100px;object-fit:cover;">
+    <div class="card-body p-2">
+      <h6 class="card-title mb-1">{{ p.title }}</h6>
+      <p class="mb-0 small">R$ {{ '%.2f'|format(p.price) }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<h3>Categorias</h3>
+<ul>
+  {% for c in categories %}
+  <li><a href="{{ url_for('catalogo', category=c) }}">{{ c }}</a></li>
+  {% endfor %}
+</ul>
+{% endblock %}
