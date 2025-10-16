@@ -5,7 +5,7 @@
     "description": "Tomate fresco orgânico",
     "price": 8.5,
     "category": "Hortaliças",
-    "imagem": "static/img/placeholder.png"
+    "imagem": "static/imges.jpg"
   },
   {
     "id": 2,
@@ -30,5 +30,14 @@
     "price": 3.2,
     "category": "Hortaliças",
     "imagem": "static/img/placeholder.png"
+  },
+  {
+    "id": 5,
+    "title": "Batata",
+    "description": "Batata orgânica",
+    "price": 4.0,
+    "category": "Hortaliças",
+    "imagem": "static/img/placeholder.png"
   }
+
 ]

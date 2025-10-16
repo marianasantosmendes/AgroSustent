@@ -1,45 +1,57 @@
 **Disciplina:** Programação Web, Projeto e Desenvolvimento de Sistemas, Banco de Dados II
 
-**Alunos:**  Lauane Rayra, Anna Clara, Luiza Fernanda, Mariana Santos
+**Alunos:** Anna Clara, Lauane Rayra, Luiza Fernanda, Mariana Santos
 
 **Professores:** Camila Santos, Eudóxia Moura, Marcos Faino
+
 # Descrição Geral do Sistema
 
-O sistema de lanchonete tem como objetivo gerenciar pedidos, produtos, clientes e pagamentos de forma eficiente e automatizada. Ele permite que clientes realizem pedidos online ou presencialmente, acompanhem o status dos pedidos e efetuem pagamentos. Os funcionários podem gerenciar o cardápio, controlar estoque, registrar vendas e emitir relatórios.
+O AgroSustent é uma plataforma web voltada para o fortalecimento da agricultura familiar e o consumo consciente.
+Seu objetivo é aproximar produtores locais e consumidores por meio de uma vitrine digital que facilita a divulgação, o pedido e o pagamento de produtos naturais, como alimentos orgânicos, cosméticos veganos e itens artesanais. 
+O sistema permite que produtores cadastrem e gerenciem seus produtos, acompanhem pedidos e controlem estoques.
+Os consumidores podem navegar, comprar e avaliar produtos com transparência e praticidade.
+O administrador supervisiona usuários, categorias, relatórios e a integridade da plataforma.
+Assim, o AgroSustent promove sustentabilidade, comércio justo e valorização das comunidades locais.
 
 ## Pesquisa Desk
 
-Levantamento de requisitos realizado por meio de entrevistas com funcionários, clientes e análise de sistemas similares. Foram identificadas necessidades de agilidade no atendimento, controle de estoque, facilidade de pagamento e acompanhamento dos pedidos.
+O levantamento de requisitos foi realizado com base em entrevistas com produtores, consumidores e análise de plataformas similares, como Raízs e Ekos Brasil.
+Identificaram-se necessidades de maior visibilidade para pequenos produtores, transparência na origem dos produtos, facilidade de pagamento e interação direta entre produtor e consumidor.
+A pesquisa também apontou a importância de um sistema simples, acessível e adaptado à realidade das comunidades agrícolas. 
 
 ## Atores / Personas 
 
-- **Cliente:** Realiza pedidos, acompanha o status e efetua pagamentos.
-- **Atendente:** Recebe pedidos, registra vendas e auxilia clientes.
-- **Gerente:** Gerencia produtos, estoque, funcionários e acessa relatórios.
-- **Cozinheiro:** Visualiza pedidos em produção e atualiza status de preparo.
+ - Consumidor: Realiza pedidos de produtos naturais, acompanha o status da compra, efetua pagamentos e avalia os produtores.
+ - Produtor Local: Cadastra e gerencia seus produtos, atualiza o estoque, recebe pedidos e mantém contato direto com os consumidores.
+ - Administrador da Plataforma: Gerencia usuários, categorias de produtos e relatórios; garante a qualidade e o bom funcionamento do sistema.
+ - Parceiros: Apoiam os produtores com orientações técnicas e conteúdos educativos sobre práticas sustentáveis.
 
 # Requistos Funcionais (CASOS DE USO)
 
-- Permitir cadastro, edição e exclusão de produtos do cardápio.
-- Permitir cadastro de clientes.
-- Realizar pedidos (seleção de produtos, quantidade, observações).
-- Consultar status do pedido (em preparo, pronto, entregue).
-- Gerenciar estoque de produtos.
-- Registrar pagamentos (dinheiro, cartão, pix).
-- Emitir relatórios de vendas e estoque.
-- Notificar clientes sobre status do pedido.
-- Gerenciar usuários do sistema (atendentes, gerente, cozinheiro).
+ - Permitir cadastro, edição e exclusão de produtos pelos produtores locais.
+ - Permitir cadastro de consumidores e produtores.
+ - Realizar pedidos de compra, com seleção de produtos, quantidade e observações.
+ - Consultar o status do pedido (pendente, em separação, entregue).
+ - Gerenciar o estoque dos produtos cadastrados.
+ - Registrar pagamentos (Pix, cartão ou retirada presencial).
+ - Emitir relatórios de vendas e desempenho dos produtores.
+ - Notificar consumidores sobre atualizações no status do pedido.
+ - Exibir perfil do produtor com informações sobre práticas sustentáveis.
+ - Permitir avaliação e feedback dos consumidores.
+ - Gerenciar usuários e permissões do sistema (administrador, produtor e parceiro comunitário).
 
 # Requistos Não Funcionais
 
-- Interface amigável e responsiva.
-- Segurança no acesso (autenticação e autorização).
-- Disponibilidade 24/7.
-- Compatibilidade com dispositivos móveis.
-- Backup automático dos dados.
-- Tempo de resposta inferior a 2 segundos por operação.
+ - Interface intuitiva, acessível e responsiva.
+ - Autenticação segura e controle de acesso por perfil.
+ - Disponibilidade contínua (24/7) para garantir o funcionamento da plataforma.
+ - Compatibilidade com navegadores e dispositivos móveis.
+ - Backup automático e periódico dos dados.
+ - Tempo de resposta inferior a 3 segundos por operação.
+ - Design sustentável, com foco na simplicidade, leveza e usabilidade.
 
 # Referências
-- Livros
-- Sites
-- Aplicativos
+ - Plataformas: Raízs, Ekos Brasil, Mercado Livre.
+ - Artigos sobre agricultura familiar e consumo consciente.
+ - Entrevistas com pequenos produtores e consumidores locais.
+ - Relatórios de sustentabilidade e economia solidária.
