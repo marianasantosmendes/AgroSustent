@@ -1,17 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="text-center py-5" style="background:#f7f9f7;">
-  <h1>Bem-vindo ao AgroSustent</h1>
-  <p class="lead">A conexão entre produtores e consumidores.</p>
+<div class="text-center py-5" style="background:#f7f9f7; background-image: url('{{ url_for('static', filename='img/fundo.jpeg') }}'); background-repeat: no-repeat; background-size: cover; background-position: center; height: 50vh; width: 100%;">
+  <h1 style="color: #f7f9f7;">Bem-vindo ao AgroSustent</h1>
+  <p class="lead" style="color: #f7f9f7;">A conexão entre produtores e consumidores.</p>
   <a class="btn btn-success" href="{{ url_for('catalogo') }}">Explorar Produtos</a>
 </div>
 
-<div class="container mt-4">
+<div class="container mt-4 text-center">
   <h2 class="mb-3">Produtos Disponíveis</h2>
   <div class="d-flex flex-wrap gap-3">
     {% for p in produtos %}
     <div class="card" style="width:220px;">
-      <img src="{{ p.imagem or url_for('static', filename='img/placeholder.png') }}" style="height:140px;object-fit:cover;">
+      <img src="{{ p.imagem }}" style="height:140px;object-fit:cover;">
       <div class="card-body">
         <h5>{{ p.title }}</h5>
         <p class="mb-1 small">{{ p.description }}</p>

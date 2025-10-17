@@ -5,7 +5,7 @@
     "description": "Tomate fresco orgânico",
     "price": 8.5,
     "category": "Hortaliças",
-    "imagem": "static/imges.jpg"
+    "imagem": "static/img/tomate.jpeg"
   },
   {
     "id": 2,
@@ -13,7 +13,7 @@
     "description": "Ovo de galinha caipira - unidade",
     "price": 0.8,
     "category": "Granja",
-    "imagem": "static/img/placeholder.png"
+    "imagem": "static/img/ovo.jpeg"
   },
   {
     "id": 3,
@@ -21,7 +21,7 @@
     "description": "Queijo de leite cru",
     "price": 25.0,
     "category": "Laticínios",
-    "imagem": "static/img/placeholder.png"
+    "imagem": "static/img/queijo.jpeg"
   },
   {
     "id": 4,
@@ -29,7 +29,7 @@
     "description": "Alface fresca",
     "price": 3.2,
     "category": "Hortaliças",
-    "imagem": "static/img/placeholder.png"
+    "imagem": "static/img/alface.jpeg"
   },
   {
     "id": 5,
@@ -37,7 +37,6 @@
     "description": "Batata orgânica",
     "price": 4.0,
     "category": "Hortaliças",
-    "imagem": "static/img/placeholder.png"
+    "imagem": "static/img/batata.jpg"
   }
-
 ]

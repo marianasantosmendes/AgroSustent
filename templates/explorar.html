@@ -7,7 +7,7 @@
 <div class="d-flex flex-wrap gap-3 mb-4">
   {% for p in produtos[:4] %}
   <div class="card" style="width:180px;">
-    <img src="{{ p.imagem or url_for('static', filename='img/placeholder.png') }}" class="card-img-top" style="height:100px;object-fit:cover;">
+    <img src="{{ p.imagem }}" class="card-img-top" style="height:100px;object-fit:cover;">
     <div class="card-body p-2">
       <h6 class="card-title mb-1">{{ p.title }}</h6>
       <p class="mb-0 small">R$ {{ '%.2f'|format(p.price) }}</p>
